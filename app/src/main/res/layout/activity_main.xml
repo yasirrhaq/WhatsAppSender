@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editTextPhone"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Phone Number"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.527"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.089" />
+
+    <EditText
+        android:id="@+id/editTextMessage"
+        android:layout_width="256dp"
+        android:layout_height="260dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Type your message here...."
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPhone" />
+
+    <Button
+        android:id="@+id/btnDial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="86dp"
+        android:layout_marginTop="48dp"
+        android:text="Dial"
+        app:layout_constraintEnd_toStartOf="@+id/btnWhatsApp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextMessage" />
+
+    <Button
+        android:id="@+id/btnWhatsApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="86dp"
+        android:text="Send to WhatsApp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnDial"
+        app:layout_constraintTop_toBottomOf="@+id/editTextMessage" />
+
+    <Button
+        android:id="@+id/btnSecondSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Send Data to Other Activity"
+        app:layout_constraintEnd_toEndOf="@+id/btnWhatsApp"
+        app:layout_constraintStart_toStartOf="@+id/btnDial"
+        app:layout_constraintTop_toBottomOf="@+id/btnWhatsApp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
